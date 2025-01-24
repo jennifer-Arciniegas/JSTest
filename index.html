@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <title>Momentum</title>
+</head>
+<body>
+    <nav class="flex justify-end gap-5 ">
+        <div class="bg-indigo-300 p-2 m-1 rounded-lg hover:bg-indigo-500">Iniciar sesion</div>
+        <div class="bg-indigo-300 p-2 m-1 rounded-lg hover:bg-indigo-500"> Registrarse</div>
+    </nav>
+    <main>
+        <div>
+            <button id="newTask" class="bg-indigo-300 p-2 m-1 rounded-lg hover:bg-indigo-500">Nueva tarea</button>
+            <button id="cancelar">cancelar</button>
+            <div id="espacio"></div>
+        </div>
+       
+
+        <div class=" flex flex-col-3 justify-between p-4">
+            <div class="bg-rose-300  p-4 ">Pendientes</div>
+            <div class="bg-sky-300 p-4 ">En proceso</div>
+            <div class="bg-green-300 p-4">Completadas</div>
+        </div>
+    </main>
+    
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", () =>{
+        document.getElementById("newTask").addEventListener("click", ()=>{
+            const espacio = document.getElementById("espacio");
+
+            //crear form de tarea
+            const formTarea = document.createElement("div")
+            formTarea.classList.add("m-10", "bg-sky-100", "py-2", "rounded-lg")
+            formTarea.innerHTML = `
+            <form action="" id="formTareaNueva">
+                <label for="title">Titulo de la tarea</label>
+                <input type="text" name="title" id="title" class="bg-white rounded-lg m-1 p-1">
+                <br>
+                <label for="descrition">Descripcion</label>
+                <input type="text" name="descrition" id="descrition" class="bg-white rounded-lg m-1 p-1">
+                <br>
+                <label for="imagen">Url de la imagen</label>
+                <input type="text" name="imagen" id="imagen" class="bg-white rounded-lg m-1 p-1">
+                <br>
+                <label for="fInici">Fecha incio de la tarea</label>
+                <input type="date" name="fInici" id="fInici" class="bg-white rounded-lg m-1 p-1">
+                <br>
+                <label for="fFin">Fecha finalizacion de la tarea</label>
+                <input type="date" name="fFin" id="fFin" class="bg-white rounded-lg m-1 p-1">
+                <br>
+                <select name="tipoTarea" id="tipoTarea">
+                    <option value="pendiente">Pendiente</option>
+                    <option value="proceso"> En proceso</option>
+                    <option value="terminada">terminada</option>
+                </select>
+                <br>
+                <div class="flex justify-center">
+                    <button class="bg-green-300 p-2 m-1 rounded-lg" id="formu">subir tarea</button>
+                </div>
+               
+            </form>
+            
+            `;
+            espacio.appendChild(formTarea)
+        })
+
+        const formulario = document.getElementById("formu")
+
+        function crearTarea(){
+            const data = {
+                titulo: document.getElementById("title").value,
+                descripcion : document.getElementById("descrition"),
+                img: document.getElementById("imagen"),
+                fInici: document.getElementById("fInici"),
+                fechaFin: document.getElementById("fFin"),
+                estado: document.getElementById("tipoTarea")
+
+            };
+            fetch("http://localhost:3000/tareas/", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(data),
+            })
+            .then((response) => response.json())
+            //.then((data) => )
+            .catch((error) => console.error("ERROR"+ error))
+
+        }
+
+
+        //cuando se de click al fromuario
+        formulario.addEventListener("submit", (event) =>{
+            event.preventDefault(); //evitar que se recarge 
+            const NuevaTarea =  data
+
+
+        })
+
+
+    })
+
+</script>
+</html>

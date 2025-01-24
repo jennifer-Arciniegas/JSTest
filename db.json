@@ -1,0 +1,15 @@
+{
+    "tareas": {
+        "id": 1,
+        "titulo": "hacerkanvan",
+        "descripcion": "haciendo",
+        "img": "url",
+        "fechaInici": "",
+        "fechaFin": "",
+        "estado": ""
+
+    },
+    "tareasUsuario":{
+
+    }
+}

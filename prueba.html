@@ -1,0 +1,29 @@
+<div id="agregarTarea" class="m-10 bg-sky-100 py-2 rounded-lg">
+    <form action="">
+        <label for="title">Titulo de la tarea</label>
+        <input type="text" name="title" id="title" class="bg-white rounded-lg m-1 p-1">
+        <br>
+        <label for="descrition">Descripcion</label>
+        <input type="text" name="descrition" id="descrition" class="bg-white rounded-lg m-1 p-1">
+        <br>
+        <label for="imagen">Url de la imagen</label>
+        <input type="text" name="imagen" id="imagen" class="bg-white rounded-lg m-1 p-1">
+        <br>
+        <label for="fInici">Fecha incio de la tarea</label>
+        <input type="date" name="fInici" id="fInici" class="bg-white rounded-lg m-1 p-1">
+        <br>
+        <label for="fFin">Fecha finalizacion de la tarea</label>
+        <input type="date" name="fFin" id="fFin" class="bg-white rounded-lg m-1 p-1">
+        <br>
+        <select name="tipoTarea" id="tipoTarea">
+            <option value="pendiente">Pendiente</option>
+            <option value="proceso"> En proceso</option>
+            <option value="terminada">terminada</option>
+        </select>
+        <br>
+        <div class="flex justify-center">
+            <button class="bg-green-300 p-2 m-1 rounded-lg">subir tarea</button>
+        </div>
+       
+    </form>
+</div>
