@@ -1,15 +1,56 @@
 {
-    "tareas": {
-        "id": 1,
-        "titulo": "hacerkanvan",
-        "descripcion": "haciendo",
-        "img": "url",
-        "fechaInici": "",
-        "fechaFin": "",
-        "estado": ""
-
+  "tareas": [
+    {
+      "title": "22",
+      "descrition": "122",
+      "imagen": "222",
+      "fInici": "2025-01-23",
+      "fFin": "2025-01-23",
+      "tipoTarea": "pendiente",
+      "id": 1
     },
-    "tareasUsuario":{
-
+    {
+      "title": "hacer test",
+      "descrition": "no morir en el intento",
+      "imagen": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFv7omQvzbVxbGXQoHJn1PxAABuNbQg7Zocg&s",
+      "fInici": "2025-01-23",
+      "fFin": "2025-01-23",
+      "tipoTarea": "proceso",
+      "id": 2
+    },
+    {
+      "title": "terminar test",
+      "descrition": "ya casi",
+      "imagen": "https://i.pinimg.com/236x/9f/8f/4c/9f8f4c2165f1df967864ee3de4d3b6ea.jpg",
+      "fInici": "2025-01-23",
+      "fFin": "2025-01-24",
+      "tipoTarea": "terminada",
+      "id": 3
+    },
+    {
+      "title": "iniciar text",
+      "descrition": "como sea",
+      "imagen": "https://ih1.redbubble.net/image.1013796875.6040/bg,f8f8f8-flat,750x,075,f-pad,750x1000,f8f8f8.jpg",
+      "fInici": "2025-01-23",
+      "fFin": "2025-01-23",
+      "tipoTarea": "pendiente",
+      "id": 4
     }
+  ],
+  "tareasUsuario": [
+    {
+      "user": {},
+      "susTareas": [
+        {
+          "id": 1,
+          "titulo": "hacerkanvan",
+          "descripcion": "haciendo",
+          "img": "url",
+          "fechaInici": "",
+          "fechaFin": "",
+          "estado": ""
+        }
+      ]
+    }
+  ]
 }
