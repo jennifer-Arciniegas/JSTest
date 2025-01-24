@@ -17,6 +17,15 @@
       "fFin": "2025-01-24",
       "tipoTarea": "terminada",
       "id": 3
+    },
+    {
+      "title": "nueva",
+      "descrition": "eeew",
+      "imagen": "",
+      "fInici": "2025-01-24",
+      "fFin": "2025-01-24",
+      "tipoTarea": "pendiente",
+      "id": 4
     }
   ],
   "tareasUsuario": [
