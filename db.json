@@ -19,13 +19,22 @@
       "id": 3
     },
     {
-      "title": "nueva",
-      "descrition": "eeew",
-      "imagen": "",
+      "title": "33",
+      "descrition": "33",
+      "imagen": "33",
       "fInici": "2025-01-24",
       "fFin": "2025-01-24",
       "tipoTarea": "pendiente",
-      "id": 4
+      "id": 5
+    },
+    {
+      "title": "ee",
+      "descrition": "ee",
+      "imagen": "ee",
+      "fInici": "2025-01-24",
+      "fFin": "2025-01-24",
+      "tipoTarea": "pendiente",
+      "id": 6
     }
   ],
   "tareasUsuario": [
